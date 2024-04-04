@@ -1,0 +1,22 @@
+{
+  "autorun": false,
+  "terminals": [
+    {
+      "name": "Client",
+      "description": "Termianl linked to the client-side",
+      "icon": "device-desktop",
+      "cwd": "./client",
+      "focus": true,
+      "command": "npm run dev"
+    },
+    {
+      "name": "Server",
+      "description": "Termianl linked to the server-side",
+      "icon": "server",
+      "cwd": "./server",
+      "focus": true,
+      "split": "Client",
+      "command": "npm run dev"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false,
+    "eslint.format.enable": true,
+    "conventionalCommits.scopes": [
+        "enviroment"
+    ]
+}
