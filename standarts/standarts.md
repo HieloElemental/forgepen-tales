@@ -1,10 +1,12 @@
-# Project Standarts
+# Project Standards
 
-## What sould endpoints look like?
+## What should endpoints look like?
+
+> **Note:** A parameter on the url that ends with the word ``...List`` must be an **array** separated with commas ``,``
 
 ### Front-end
 
-A **front-end endpoint** (or client url) start should look like this: ``https://tales.forgepen.com/`` and then continue depending on the module required
+A **front-end endpoint** (or client url) start should look like this: ``https://tales.forgepen.ink/`` and then continue depending on the module required
 
 - **Root**
 
@@ -14,7 +16,7 @@ A **front-end endpoint** (or client url) start should look like this: ``https://
 
   ``/login``: login page
 
-  ``/signup``: signup pagess
+  ``/signup``: signup pages
 
 - **Profiles**
 
@@ -48,14 +50,33 @@ A **front-end endpoint** (or client url) start should look like this: ``https://
 
 - **Search**
 
-  ``/search``
+  ``/search/global/${searchQuery}``: made for general search
 
+  ``/search/book/${tagsList}/${searchQuery}``: search a book with some tags included
 
+  ``/search/user/${tagsList}/${searchQuery}``: search a user with some tags included
 
+- **404**
+
+  ``/404``: not found error page
 
 
 ### Back-end
 
-A **back-end endpoint** (or API url) start should look like this: ``https://talesapi.forgepen.com/`` and then continue depending on the module 
+A **back-end endpoint** (or API url) start should look like this: ``https://talesapi.forgepen.ink/`` and then continue depending on the module 
 
-> **ATENTION:** Backend API can **ONLY** return an *image* or a *JSON object*
+> **ATTENTION:** Backend API can **ONLY** return an *image* or a *JSON object*
+
+- **Auth**
+
+  ``(POST)/auth/login``: Get the username and password from the client and make the authentication logic
+
+  ``(POST)/auth/verify-token``: Verify the token given by GoogleOAuth API to authenticate the user via Google
+
+  ``(POST)/auth/signup``: Sign up the user with given data
+
+- **Profiles**
+
+  ``(GET)/user``: Get the registered user information
+
+  ``(GET)/user/${userName}``: get an specific user information, books and popular contributions.
