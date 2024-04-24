@@ -79,4 +79,33 @@ A **back-end endpoint** (or API url) start should look like this: ``https://tale
 
   ``(GET)/user``: Get the registered user information
 
-  ``(GET)/user/${userName}``: get an specific user information, books and popular contributions.
+  ``(GET)/user/name/${userName}``: get an specific user information, books and popular contributions.
+
+  ``(GET)/user/users``: Get a list of most recent activated users
+
+## How should user objects look like?
+
+Google OAuth gives this user alternative information:
+
+```
+{
+  "iss": "https://accounts.google.com",
+  "azp": "[...].apps.googleusercontent.com",
+  "aud": "[...].apps.googleusercontent.com",
+  "sub": "123456789012345678901",
+  "email": "[...]@gmail.com",
+  "email_verified": boolean,
+  "nbf": 1234567890,
+  "name": "[...]",
+  "picture": "https://lh3.googleusercontent.com/[...]",
+  "given_name": "[...]",
+  "family_name": "[...]",
+  "iat": 1234567890,
+  "exp": 1234567890,
+  "jti": "[...]"
+}
+```
+
+> **Note:** use the next element to store the user backend relations 
+>
+> _**sub (Subject):**_ The user's unique Google ID remains constant and serves as a stable identifier for the user's account. It doesn't change unless the user deletes their account and creates a new one.

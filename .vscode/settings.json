@@ -7,6 +7,6 @@
     "eslint.format.enable": true,
     "conventionalCommits.scopes": [
         "enviroment",
-        "standart"
+        "standard"
     ]
 }
