@@ -1,0 +1,22 @@
+.BooksBanner {
+  height: 0;
+}
+
+.BooksBanner img {
+  position: absolute;
+  top: calc(-800px + 50vw);
+  right: -120px;
+  width: 800px;
+  z-index: -2;
+}
+
+.BooksBanner::after {
+  content: '';
+  position: absolute;
+  right: -400px;
+  top: calc(-200px + 10vw);
+  width: 1100px;
+  height: calc(200px + 40vw);
+  background: radial-gradient(rgba(0,0,0,0) 0%, var(--background) 70%);
+  z-index: -1;
+}

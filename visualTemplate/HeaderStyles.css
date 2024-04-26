@@ -1,0 +1,25 @@
+.Header {
+  margin-top: 60px;
+  height: 50vh;
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Header * {
+  margin: 4px;
+}
+
+.Header h1 {
+  font-size: calc(4vw + 56px);
+  width: 80%;
+}
+
+.Header h2 {
+  font-size: 28px;
+  font-weight: normal;
+  color: var(--middle);
+  width: 80%;
+}

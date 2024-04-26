@@ -1,0 +1,47 @@
+/* Google main font */
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Normalize css */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+
+input[type=text] {
+  background: rgba(var(--content-rgb), .1);
+  border-radius: 8px;
+  border: 1px solid var(--middle);
+  padding-left: 32px; 
+  position: relative;
+  left: -24px;
+}
+
+input::placeholder {
+  color: var(--middle);
+}
+
+/* Google Material Icons */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+body {
+  background: var(--background);
+  overflow-x: hidden !important;
+}
+
+body * {
+  font-family: "Shantell Sans", Arial, Helvetica, sans-serif;
+  color: var(--content);
+}
+
+.Dark {
+  --background: #010904;
+  --background-rgb: 1, 9, 4;
+  --middle: #606560;
+  --middle-rgb: 96, 101, 96;
+  --content: #f2faf2;
+  --content-rgb: 242, 250, 242;
+}
+

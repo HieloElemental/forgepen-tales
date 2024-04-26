@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="GlobaStyles.css">
+  <link rel="stylesheet" href="NavbarStyles.css">
+  <link rel="stylesheet" href="BooksBannerStyles.css">
+  <link rel="stylesheet" href="HeaderStyles.css">
+</head>
+
+<body class="Dark">
+  <header>
+    <nav id="NavBar">
+      <div class="Open">
+        <ul>
+          <li>
+            <a onclick="document.getElementById('NavBar').classList.add('opened')" class="OpenBtn">
+              <span class="material-symbols-outlined">
+                menu
+              </span>
+            </a>
+          </li>
+          <li>
+            <div class="OpenBackground">
+              <a onclick="document.getElementById('NavBar').classList.remove('opened')">
+                <span class="material-symbols-outlined">
+                  close
+                </span>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="Brand">
+        <ul class="Icon-Name">
+          <li>
+            <span class="material-symbols-outlined">
+              book_5
+            </span>
+          </li>
+          <li>
+            <b>Forgepen&nbsp;</b>
+            Tales!
+          </li>
+        </ul>
+      </div>
+      <div>
+        <div class="Browse">
+          <ul>
+            <li>
+              <form action="">
+                <label for="search">
+                  <span class="material-symbols-outlined">
+                    search
+                  </span>
+                </label>
+                <input name="search" type="text" placeholder="Search a book" />
+              </form>
+            </li>
+          </ul>
+        </div>
+        <div class=" AuthButtons">
+          <ul>
+            <li><a href="" class="SignInBtn">Sign in</a></li>
+            <li><a href="" class="SignUpBtn">Sign up</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="BooksBanner">
+      <img src="assets/books.png" alt="">
+    </div>
+    <div class="Header">
+      <h1>Write together</h1>
+      <h2>Let's build your books from scratch</h2>
+    </div>
+  </header>
+</body>
+
+</html>

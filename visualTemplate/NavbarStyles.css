@@ -1,0 +1,138 @@
+/* Base styles */
+nav {
+  width: calc(100vw - 32px);
+  background: linear-gradient(to bottom, rgba(var(--background-rgb), .8), rgba(var(--background-rgb), .6), transparent);
+  height: 32px;
+  padding: 16px;
+  font-size: 16px;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 1;
+  --responsive-left: -100vw;
+}
+
+nav.opened {
+  --responsive-left: 0px;
+}
+
+nav,
+nav div,
+nav ul,
+nav ul * {
+  list-style: none;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  padding-right: 16px;
+}
+
+nav a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav .SignUpBtn {
+  padding: 0 8px;
+  border: 1px solid var(--content);
+  border-radius: 8px;
+}
+
+nav .SignUpBtn:hover {
+  border-color: var(--middle);
+}
+
+nav form label span {
+  color: var(--middle);
+  left: 6px;
+  top: 4px;
+  position: relative;
+}
+
+nav input {
+  width: 240px;
+}
+
+nav .Open {
+  display: none;
+}
+
+/* Media queries for responsive styles */
+@media screen and (max-width: 1020px) {
+  nav {
+    flex-direction: row-reverse;
+    position: fixed;
+  }
+
+  nav .SignUpBtn,
+  nav .Browse,
+  nav .OpenBackground,
+  nav .OpenBackground a,
+  .Open .OpenBtn {
+    transition: .2s ease-out;
+  }
+
+  nav .SignUpBtn {
+    display: inline-block;
+    align-content: center;
+    position: fixed;
+    left: calc(10vw + var(--responsive-left));
+    width: 60vw;
+    top: calc(90vh - 40px);
+    text-align: center;
+    height: 50px;
+  }
+
+  nav .Browse {
+    position: fixed;
+    left: calc(10vw + var(--responsive-left));
+    top: calc(90vh - 120px);
+  }
+
+  nav .Browse input {
+    left: -24px;
+    width: calc(60vw - 16px);
+  }
+
+  nav .Open {
+    display: block;
+  }
+
+  nav.opened .Open .OpenBtn {
+    position: relative;
+    right: -20vw;
+  }
+
+  nav .OpenBackground {
+    background: var(--background);
+    height: 100vh;
+    width: 90vw;
+    top: 0;
+    left: var(--responsive-left);
+    position: fixed;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+
+  nav .OpenBackground a {
+    position: fixed;
+    top: 16px;
+    left: calc(80vw + var(--responsive-left));
+  }
+
+  nav .SignInBtn,
+  nav .SignUpBtn {
+    padding: 0 8px;
+    border: 1px solid var(--content);
+    border-radius: 8px;
+  }
+}
